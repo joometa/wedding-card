@@ -69,13 +69,13 @@ export const Information = styled.section`
 `;
 
 export const Gallery = styled.section`
-  width: 100vw;
-  min-height: 50vh;
+  width: 100%;
+  height: max-content;
+  max-width: 600px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  background-color: rgba(182, 182, 135, 0.3);
 `;
 
 export const Title = styled.div`

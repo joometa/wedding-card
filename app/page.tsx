@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   AccountTransfer,
   Gallery,
@@ -11,10 +11,19 @@ import {
   Title,
   VideoContainer,
 } from "./styles";
+import { Carousel } from "@/components";
 
 export default function Home() {
+  const [videoHeight, setVideoHeight] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // setVideoHeight(window.innerHeight);
+    }
+  }, []);
+
   return (
-    <main>
+    <main className="w-screen flex flex-col items-center">
       <VideoContainer>
         <div className="video-wrap">
           <div className="text-container">
@@ -62,6 +71,9 @@ export default function Home() {
           <strong>사진 보고 가세요</strong>
           <span />
         </Title>
+        <div className="pb-40 bg-red-100">
+          <Carousel />
+        </div>
       </Gallery>
       <Road>
         <Title>
