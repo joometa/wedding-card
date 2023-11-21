@@ -15,6 +15,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const KAKAO_APP_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
+
   return (
     <html lang="en">
       <head>

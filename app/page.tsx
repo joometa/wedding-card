@@ -11,7 +11,7 @@ import {
   Header,
   VideoContainer,
 } from "./styles";
-import { Carousel, Title } from "@/components";
+import { Carousel, Title, KakaoMap } from "@/components";
 
 export default function Home() {
   const [videoHeight, setVideoHeight] = useState(0);
@@ -65,6 +65,7 @@ export default function Home() {
           <strong>오시는 길</strong>
           <span />
         </Header>
+        <KakaoMap />
       </Road>
       <AccountTransfer>
         <Header>

@@ -38,7 +38,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "types/video.d.ts"
+    "types/video.d.ts",
+    "types/global.d.ts"
   ],
   "exclude": ["node_modules"]
 }
