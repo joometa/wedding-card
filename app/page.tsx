@@ -8,10 +8,10 @@ import {
   Information,
   Road,
   ShareZone,
-  Title,
+  Header,
   VideoContainer,
 } from "./styles";
-import { Carousel } from "@/components";
+import { Carousel, Title } from "@/components";
 
 export default function Home() {
   const [videoHeight, setVideoHeight] = useState(0);
@@ -24,29 +24,13 @@ export default function Home() {
 
   return (
     <main className="w-screen flex flex-col items-center">
-      <VideoContainer>
-        <div className="video-wrap">
-          <div className="text-container">
-            <caption>WEDDING INVITATION</caption>
-            <h1>정주 & 유리</h1>
-            <p>
-              2024년 2월 24일 토요일, 1:30PM
-              <br />
-              스카이 웨딩홀 4층
-            </p>
-            <div className="line" />
-          </div>
-        </div>
-        <video loop autoPlay playsInline muted>
-          <source src="/assets/video/sample.mp4" type="video/mp4" />
-        </video>
-      </VideoContainer>
+      <Title />
       <Information>
-        <Title>
+        <Header>
           <span />
           <strong>결혼합니다</strong>
           <span />
-        </Title>
+        </Header>
         <div className="desc">
           여름에 태어난 정주
           <br />
@@ -66,42 +50,42 @@ export default function Home() {
         </div>
       </Information>
       <Gallery>
-        <Title>
+        <Header>
           <span />
           <strong>사진 보고 가세요</strong>
           <span />
-        </Title>
-        <div className="pb-40 bg-red-100">
+        </Header>
+        <div className="pb-40">
           <Carousel />
         </div>
       </Gallery>
       <Road>
-        <Title>
+        <Header>
           <span />
           <strong>오시는 길</strong>
           <span />
-        </Title>
+        </Header>
       </Road>
       <AccountTransfer>
-        <Title>
+        <Header>
           <span />
           <strong>마음 전하실 곳</strong>
           <span />
-        </Title>
+        </Header>
       </AccountTransfer>
       <GuestBook>
-        <Title>
+        <Header>
           <span />
           <strong>방명록</strong>
           <span />
-        </Title>
+        </Header>
       </GuestBook>
       <ShareZone>
-        <Title>
+        <Header>
           <span />
           <strong>공유하기</strong>
           <span />
-        </Title>
+        </Header>
       </ShareZone>
     </main>
   );

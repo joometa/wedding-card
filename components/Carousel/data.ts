@@ -27,7 +27,7 @@ import img_34 from "public/assets/images/34.webp";
 import img_35 from "public/assets/images/35.webp";
 import img_37 from "public/assets/images/37.webp";
 import img_39 from "public/assets/images/39.webp";
-import Image from "next/image";
+
 export const images = [
   img_12,
   img_1,
@@ -59,3 +59,122 @@ export const images = [
   img_37,
   img_39,
 ];
+
+// export const images2 = [
+//   {
+//     original: getImageSrc(img_1),
+//     thumbnail: getImageSrc(img_1),
+//   },
+//   {
+//     original: getImageSrc(img_2),
+//     thumbnail: getImageSrc(img_2),
+//   },
+//   {
+//     original: getImageSrc(img_3),
+//     thumbnail: getImageSrc(img_3),
+//   },
+//   {
+//     original: getImageSrc(img_4),
+//     thumbnail: getImageSrc(img_4),
+//   },
+//   {
+//     original: getImageSrc(img_5),
+//     thumbnail: getImageSrc(img_5),
+//   },
+//   {
+//     original: getImageSrc(img_6),
+//     thumbnail: getImageSrc(img_6),
+//   },
+//   {
+//     original: getImageSrc(img_8),
+//     thumbnail: getImageSrc(img_8),
+//   },
+//   {
+//     original: getImageSrc(img_9),
+//     thumbnail: getImageSrc(img_9),
+//   },
+//   {
+//     original: getImageSrc(img_10),
+//     thumbnail: getImageSrc(img_10),
+//   },
+//   {
+//     original: getImageSrc(img_11),
+//     thumbnail: getImageSrc(img_11),
+//   },
+//   {
+//     original: getImageSrc(img_12),
+//     thumbnail: getImageSrc(img_12),
+//   },
+//   {
+//     original: getImageSrc(img_14),
+//     thumbnail: getImageSrc(img_14),
+//   },
+//   {
+//     original: getImageSrc(img_17),
+//     thumbnail: getImageSrc(img_17),
+//   },
+//   {
+//     original: getImageSrc(img_20),
+//     thumbnail: getImageSrc(img_20),
+//   },
+//   {
+//     original: getImageSrc(img_21),
+//     thumbnail: getImageSrc(img_21),
+//   },
+//   {
+//     original: getImageSrc(img_23),
+//     thumbnail: getImageSrc(img_23),
+//   },
+//   {
+//     original: getImageSrc(img_24),
+//     thumbnail: getImageSrc(img_24),
+//   },
+//   {
+//     original: getImageSrc(img_25),
+//     thumbnail: getImageSrc(img_25),
+//   },
+//   {
+//     original: getImageSrc(img_27),
+//     thumbnail: getImageSrc(img_27),
+//   },
+//   {
+//     original: getImageSrc(img_28),
+//     thumbnail: getImageSrc(img_28),
+//   },
+//   {
+//     original: getImageSrc(img_29),
+//     thumbnail: getImageSrc(img_29),
+//   },
+//   {
+//     original: getImageSrc(img_30),
+//     thumbnail: getImageSrc(img_30),
+//   },
+//   {
+//     original: getImageSrc(img_31),
+//     thumbnail: getImageSrc(img_31),
+//   },
+//   {
+//     original: getImageSrc(img_32),
+//     thumbnail: getImageSrc(img_32),
+//   },
+//   {
+//     original: getImageSrc(img_33),
+//     thumbnail: getImageSrc(img_33),
+//   },
+//   {
+//     original: getImageSrc(img_34),
+//     thumbnail: getImageSrc(img_34),
+//   },
+//   {
+//     original: getImageSrc(img_35),
+//     thumbnail: getImageSrc(img_35),
+//   },
+//   {
+//     original: getImageSrc(img_37),
+//     thumbnail: getImageSrc(img_37),
+//   },
+//   {
+//     original: getImageSrc(img_39),
+//     thumbnail: getImageSrc(img_39),
+//   },
+// ];

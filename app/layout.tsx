@@ -22,6 +22,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <div id="react-modals" />
       </body>
     </html>
   );
