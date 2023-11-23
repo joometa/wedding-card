@@ -12,6 +12,9 @@ import {
   VideoContainer,
 } from "./styles";
 import { Carousel, Title, KakaoMap } from "@/components";
+import { Tmap } from "@/components/Tmap";
+import { NaverMap } from "@/components/NaverMap/NaverMap";
+import { KaKaoNavi } from "@/components/KakaoNavi";
 
 export default function Home() {
   const [videoHeight, setVideoHeight] = useState(0);
@@ -66,6 +69,11 @@ export default function Home() {
           <span />
         </Header>
         <KakaoMap />
+        <div style={{ display: "flex", gap: "20px", marginTop: "20px" }}>
+          <Tmap />
+          <NaverMap />
+          <KaKaoNavi />
+        </div>
       </Road>
       <AccountTransfer>
         <Header>

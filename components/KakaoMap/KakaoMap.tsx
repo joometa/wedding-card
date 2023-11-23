@@ -49,11 +49,8 @@ export function KakaoMap() {
                   position: coords,
                 });
 
-                const infowindow = new window.kakao.maps.InfoWindow({
-                  content:
-                    '<div style="width:150px;text-align:center;padding:6px 0;">웨딩홀</div>',
-                });
-                infowindow.open(map, marker);
+                // const infowindow = new window.kakao.maps.InfoWindow();
+                // infowindow.open(map, marker);
 
                 map.setCenter(coords);
               }
