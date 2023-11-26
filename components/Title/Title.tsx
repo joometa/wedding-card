@@ -1,6 +1,17 @@
+import { useEffect, useState } from "react";
 import { Wrapper, StyledVideo } from "./style";
 
 export const Title = () => {
+  // const [vh, setVh] = useState(0);
+
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      const vh = window.innerHeight + 0.01;
+      console.log(vh);
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    }
+  }, []);
+
   return (
     <Wrapper>
       <div className="title-wrap">

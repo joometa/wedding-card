@@ -10,23 +10,11 @@ export const NaverMap: React.FC = () => {
   const longitude = "127.7534886961313";
 
   const handleClick = () => {
-    const scheme = `nmap://car_route?dlat=${latitude}&dlng=${longitude}`;
-    const webUrl = `https://m.map.naver.com/directions/?eway%3D0%26from%3D%26fromCoord%3D%26to%3D%26toCoord%3D${longitude}%2C${latitude}%26type%3Dcar`;
-    const today = new Date();
-    const time = today.getHours() + today.getMinutes() + today.getSeconds();
-    const iOS =
-      !!navigator.userAgent && /iPad|iPhone|iPod/.test(navigator.userAgent);
-    let appStore = `itms-apps://itunes.apple.com/app/id311867728?mt=8`;
+    if (typeof window !== "undefined") {
+      const weddingHole = "춘천스카이컨벤션웨딩홀";
+      const url = `nmap://search?query=${encodeURIComponent(weddingHole)}&amp;`;
 
-    if (iOS) {
-      // ios
-      window.location.href = `${scheme}&appTime=${time};${appStore}`;
-    } else if (navigator.userAgent.includes("Android")) {
-      // android
-      window.location.href = `${scheme};market://details?id=com.nhn.android.nmap`;
-    } else {
-      // pc
-      window.location.href = webUrl;
+      window.open(url);
     }
   };
 

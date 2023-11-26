@@ -1,31 +1,49 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import styled from "styled-components";
 import IconKaKaoNavi from "public/assets/images/kakaonavi.svg";
 import Image from "next/image";
+
+declare global {
+  interface Window {
+    Kakao: any;
+  }
+}
 
 export const KaKaoNavi: React.FC = () => {
   const latitude = "37.907255718584445";
   const longitude = "127.7534886961313";
 
   const handleClick = () => {
-    const scheme = `kakaonavi://route?sp=37.537229,127.005515&ep=${latitude},${longitude}&by=CAR`;
-    const webUrl = `https://map.kakao.com/link/map/카카오네비,${latitude},${longitude}`;
-    const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    let appStore = `itms-apps://itunes.apple.com/app/id304608425?mt=8`;
-
-    if (iOS) {
-      // ios
-      window.location.href = `${scheme};${appStore}`;
-    } else if (navigator.userAgent.includes("Android")) {
-      // android
-      window.location.href = `${scheme};market://details?id=net.daum.android.map`;
-    } else {
-      // pc
-      window.location.href = webUrl;
+    if (window.Kakao) {
+      window.Kakao.Navi.start({
+        name: "현대백화점 판교점",
+        x: latitude,
+        y: longitude,
+        coordType: "wgs84",
+      });
     }
   };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const kakaoScript = document.createElement("script");
+      kakaoScript.src =
+        "https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js";
+      kakaoScript.async = true;
+      window.document.head.appendChild(kakaoScript);
+
+      const KakaoLoadHandler = () => {
+        // Initialize Kakao JavaScript SDK after the script is loaded
+        if (window.Kakao) {
+          window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_JS_KEY);
+        }
+      };
+
+      kakaoScript.addEventListener("load", KakaoLoadHandler);
+    }
+  }, []);
 
   return (
     <KaKaoNaviButton onClick={handleClick}>
