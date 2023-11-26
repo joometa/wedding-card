@@ -35,7 +35,6 @@ export const KaKaoNavi: React.FC = () => {
       window.document.head.appendChild(kakaoScript);
 
       const KakaoLoadHandler = () => {
-        // Initialize Kakao JavaScript SDK after the script is loaded
         if (window.Kakao) {
           window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_JS_KEY);
         }
