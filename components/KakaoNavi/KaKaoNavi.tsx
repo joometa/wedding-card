@@ -16,14 +16,12 @@ export const KaKaoNavi: React.FC = () => {
   const longitude = "127.7534886961313";
 
   const handleClick = () => {
-    if (window.Kakao) {
-      window.Kakao.Navi.start({
-        name: "현대백화점 판교점",
-        x: latitude,
-        y: longitude,
-        coordType: "wgs84",
-      });
-    }
+    window.Kakao.Navi.start({
+      name: "현대백화점 판교점",
+      x: latitude,
+      y: longitude,
+      coordType: "wgs84",
+    });
   };
 
   useEffect(() => {
@@ -32,6 +30,7 @@ export const KaKaoNavi: React.FC = () => {
       kakaoScript.src =
         "https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js";
       kakaoScript.async = true;
+      kakaoScript.crossOrigin = "anonymous";
       window.document.head.appendChild(kakaoScript);
 
       const KakaoLoadHandler = () => {

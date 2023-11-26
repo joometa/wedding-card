@@ -36,8 +36,6 @@ export function KakaoMap() {
             "강원특별자치도 춘천시 동면 춘천순환로 770",
             function (result: any, status: any) {
               // 정상적으로 검색이 완료됐으면
-              console.log(status);
-              console.log(window.kakao.maps.services.Status);
               if (status === window.kakao.maps.services.Status.OK) {
                 const coords = new window.kakao.maps.LatLng(
                   result[0].y,
@@ -66,6 +64,7 @@ export function KakaoMap() {
 }
 
 const Wrapper = styled.div`
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   height: 400px;
 `;

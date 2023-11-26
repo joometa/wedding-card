@@ -15,6 +15,7 @@ import { Carousel, Title, KakaoMap } from "@/components";
 import { Tmap } from "@/components/Tmap";
 import { NaverMap } from "@/components/NaverMap/NaverMap";
 import { KaKaoNavi } from "@/components/KakaoNavi";
+import { KakaoShare } from "@components/KakaoShare";
 
 export default function Home() {
   const [videoHeight, setVideoHeight] = useState(0);
@@ -95,6 +96,7 @@ export default function Home() {
           <strong>공유하기</strong>
           <span />
         </Header>
+        <KakaoShare />
       </ShareZone>
     </main>
   );
