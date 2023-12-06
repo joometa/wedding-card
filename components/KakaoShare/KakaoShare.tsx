@@ -35,7 +35,7 @@ export function KakaoShare() {
           objectType: "feed",
           content: {
             title: "정주❤️유리 결혼합니다",
-            description: "2024.02.24 1:00PM, 춘천스카이웨딩홀",
+            description: "2024.02.24(1:00PM), 춘천스카이웨딩홀",
             imageUrl: `${shareUrl}images/kakaotalk.png`,
             link: {
               mobileWebUrl: shareUrl,

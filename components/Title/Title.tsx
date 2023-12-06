@@ -26,7 +26,7 @@ export const Title = () => {
           <div className="line" />
         </div>
       </div>
-      <StyledVideo loop autoPlay playsInline muted>
+      <StyledVideo loop autoPlay playsInline muted preload="auto">
         <source src="/assets/video/sample.mp4" type="video/mp4" />
       </StyledVideo>
     </Wrapper>

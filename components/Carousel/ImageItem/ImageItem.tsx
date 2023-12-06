@@ -17,17 +17,8 @@ export function ImageItem({ className, src, size = "main", onClick }: Props) {
   };
   return (
     <Wrapper data-size={size} onClick={handleClick}>
-      <div
-        className="blur-background"
-        style={{ backgroundImage: `url(${src.src})` }}
-      />
-
-      <Image
-        className={className}
-        src={src}
-        alt="wedding-image"
-        loading="lazy"
-      />
+      <div className="blur-background" />
+      <img className={className} src={src.src} alt="wedding-image" />
     </Wrapper>
   );
 }
@@ -48,10 +39,10 @@ const Wrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background-size: cover;
-    filter: blur(40px);
-    background-color: rgba(0, 0, 0, 0.6);
-    transform: scale(1.1);
+    /* background-size: cover; */
+    /* filter: blur(40px); */
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    /* transform: scale(1.1); */
     width: 100%;
     height: 100%;
   }
