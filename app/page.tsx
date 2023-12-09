@@ -16,6 +16,7 @@ import { Tmap } from "@/components/Tmap";
 import { NaverMap } from "@/components/NaverMap/NaverMap";
 import { KaKaoNavi } from "@/components/KakaoNavi";
 import { KakaoShare } from "@components/KakaoShare";
+import Link from "next/link";
 
 export default function Home() {
   const [videoHeight, setVideoHeight] = useState(0);
@@ -82,6 +83,9 @@ export default function Home() {
           <strong>마음 전하실 곳</strong>
           <span />
         </Header>
+        <button className="toss-bank">
+          <Link href="https://toss.me/2eejj">토스</Link>
+        </button>
       </AccountTransfer>
       <GuestBookContainer>
         <Header>
@@ -97,6 +101,7 @@ export default function Home() {
           <strong>공유하기</strong>
           <span />
         </Header>
+
         <KakaoShare />
       </ShareZone>
     </main>

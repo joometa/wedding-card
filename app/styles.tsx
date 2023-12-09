@@ -62,6 +62,12 @@ export const AccountTransfer = styled.section`
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  .toss-bank {
+    padding: 16px;
+    background-color: lightblue;
+    color: white;
+    border-radius: 16px;
+  }
 `;
 
 export const GuestBookContainer = styled.section`
