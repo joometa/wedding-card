@@ -4,14 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import {
   AccountTransfer,
   Gallery,
-  GuestBook,
+  GuestBookContainer,
   Information,
   Road,
   ShareZone,
   Header,
   VideoContainer,
 } from "./styles";
-import { Carousel, Title, KakaoMap } from "@/components";
+import { Carousel, Title, KakaoMap, GuestBook } from "@/components";
 import { Tmap } from "@/components/Tmap";
 import { NaverMap } from "@/components/NaverMap/NaverMap";
 import { KaKaoNavi } from "@/components/KakaoNavi";
@@ -83,13 +83,14 @@ export default function Home() {
           <span />
         </Header>
       </AccountTransfer>
-      <GuestBook>
+      <GuestBookContainer>
         <Header>
           <span />
           <strong>방명록</strong>
           <span />
         </Header>
-      </GuestBook>
+        <GuestBook />
+      </GuestBookContainer>
       <ShareZone>
         <Header>
           <span />

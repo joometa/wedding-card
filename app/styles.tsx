@@ -64,7 +64,7 @@ export const AccountTransfer = styled.section`
   flex-direction: column;
 `;
 
-export const GuestBook = styled.section`
+export const GuestBookContainer = styled.section`
   width: 100vw;
   min-height: 50vh;
   display: flex;
