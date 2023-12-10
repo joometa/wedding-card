@@ -1,0 +1,83 @@
+.introduction-section {
+  font-family: "MapoFlowerIsland";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  strong {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 19px;
+  }
+
+  .desc {
+    text-align: center;
+  }
+
+  .family-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 0;
+    margin-top: 50px;
+    border-top: 1px solid rgba(223, 211, 211, 0.7);
+    border-bottom: 1px solid rgba(223, 211, 211, 0.7);
+
+    .male {
+      display: flex;
+      line-height: 1;
+      height: 20px;
+      margin-bottom: 14px;
+
+      .parent {
+        display: flex;
+        justify-content: space-between;
+
+        width: 50%;
+        margin-bottom: 10px;
+        .dot {
+          color: rgb(0, 0, 0, 0.5);
+        }
+        .name {
+          position: relative;
+          img {
+            position: absolute;
+            top: 0;
+            left: -16px;
+          }
+        }
+      }
+      .child {
+        display: flex;
+        justify-content: flex-end;
+        line-height: 1;
+        width: 50%;
+        .name {
+          margin-left: 20px;
+        }
+      }
+    }
+    .female {
+      line-height: 1;
+      display: flex;
+      height: 16px;
+      .parent {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        .dot {
+          color: rgb(0, 0, 0, 0.5);
+        }
+      }
+      .child {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        .name {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

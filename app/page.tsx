@@ -1,69 +1,33 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import {
   AccountTransfer,
-  Gallery,
   GuestBookContainer,
-  Information,
   Road,
   ShareZone,
   Header,
-  VideoContainer,
 } from "./styles";
-import { Carousel, Title, KakaoMap, GuestBook } from "@/components";
-import { Tmap } from "@/components/Tmap";
-import { NaverMap } from "@/components/NaverMap/NaverMap";
-import { KaKaoNavi } from "@/components/KakaoNavi";
-import { KakaoShare } from "@components/KakaoShare";
+import {
+  Title,
+  KakaoMap,
+  GuestBook,
+  Introduction,
+  Gallery,
+} from "@/components";
+import { Tmap } from "@/components/atoms/Tmap";
+import { NaverMap } from "@/components/atoms/NaverMap/NaverMap";
+import { KaKaoNavi } from "@/components/atoms/KakaoNavi";
+import { KakaoShare } from "@/components/atoms/KakaoShare";
 import Link from "next/link";
 
+import "./_home.scss";
+
 export default function Home() {
-  const [videoHeight, setVideoHeight] = useState(0);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // setVideoHeight(window.innerHeight);
-    }
-  }, []);
-
   return (
-    <main className="w-screen flex flex-col items-center">
+    <main className="home-container">
       <Title />
-      <Information>
-        <Header>
-          <span />
-          <strong>결혼합니다</strong>
-          <span />
-        </Header>
-        <div className="desc">
-          여름에 태어난 정주
-          <br />
-          봄에 태어난 유리
-          <br />
-          <br />
-          관심사도, 가치관도 달랐던 두사람
-          <br />
-          사랑으로 닮은 꼴이 되어
-          <br />
-          인생이라는 여정을 함께 떠나려 합니다.
-          <br />
-          <br />
-          따뜻한 격려와 축복으로
-          <br />
-          힘찬 출발의 자리를 빛내주시면 감사하겠습니다.
-        </div>
-      </Information>
-      <Gallery>
-        <Header>
-          <span />
-          <strong>사진 보고 가세요</strong>
-          <span />
-        </Header>
-        <div className="pb-40">
-          <Carousel />
-        </div>
-      </Gallery>
+      <Introduction />
+      <Gallery />
       <Road>
         <Header>
           <span />
@@ -85,6 +49,16 @@ export default function Home() {
         </Header>
         <button className="toss-bank">
           <Link href="https://toss.me/2eejj">토스</Link>
+        </button>
+        <button className="toss-bank">
+          <Link href="https://qr.kakaopay.com/281006011000021662761558">
+            유리카페
+          </Link>
+        </button>
+        <button className="toss-bank">
+          <Link href="https://qr.kakaopay.com/281006011000003820636642">
+            정주카페
+          </Link>
         </button>
       </AccountTransfer>
       <GuestBookContainer>

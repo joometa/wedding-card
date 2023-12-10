@@ -1,10 +1,10 @@
 import React, { useCallback, useRef, useState } from "react";
-import { CarouselContainer } from "./style";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper/types";
-import { ImageItem } from "./ImageItem";
-import { ImageModal } from "./ImageModal";
+import { ImageItem } from "../ImageItem";
+import { ImageModal } from "../ImageModal";
+import "./_carousel.scss";
 import "swiper/css";
 import "swiper/css/thumbs";
 import "swiper/css/navigation";
@@ -42,7 +42,7 @@ export const Carousel = () => {
 
   return (
     <>
-      <CarouselContainer>
+      <div className="carousel-container">
         <Swiper
           className="main"
           modules={[Navigation]}
@@ -68,7 +68,7 @@ export const Carousel = () => {
         >
           {renderSubImages()}
         </Swiper>
-      </CarouselContainer>
+      </div>
       <ImageModal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
         <img
           src={detailImageUrl}

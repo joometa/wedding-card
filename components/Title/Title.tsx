@@ -1,5 +1,16 @@
 import { useEffect, useState } from "react";
-import { Wrapper, StyledVideo } from "./style";
+import { Whisper } from "next/font/google";
+
+import "./_title.scss";
+import Image from "next/image";
+import img_4 from "public/assets/images/4.webp";
+import flowerImage from "public/assets/images/flower_white.png";
+
+const whisper = Whisper({
+  weight: "400",
+  preload: true,
+  subsets: ["latin"],
+});
 
 export const Title = () => {
   // const [vh, setVh] = useState(0);
@@ -7,28 +18,34 @@ export const Title = () => {
   useEffect(() => {
     if (typeof document !== "undefined") {
       const vh = window.innerHeight + 0.01;
-      console.log(vh);
       document.documentElement.style.setProperty("--vh", `${vh}px`);
     }
   }, []);
 
   return (
-    <Wrapper>
-      <div className="title-wrap">
-        <div className="text-container">
-          <span>WEDDING INVITATION</span>
-          <h1>정주 & 유리</h1>
-          <p>
-            2024년 2월 24일 토요일, 1:30PM
-            <br />
-            스카이 웨딩홀 4층
-          </p>
-          <div className="line" />
+    <section className="title-container">
+      <figure className={whisper.className}>wedding invitation</figure>
+      <div className="name-area">
+        <div className="name-wrap">
+          <span className={`${whisper.className} en`}>Jeongjoo</span>
+          <span className="ko">이 정 주</span>
+        </div>
+        <div className="name-divide" />
+        <div className="name-wrap">
+          <span className={`${whisper.className} en`}>Yuri</span>
+          <span className="ko">강 유 리</span>
         </div>
       </div>
-      {/* <StyledVideo loop autoPlay playsInline muted preload="auto">
-        <source src="/assets/video/sample.mp4" type="video/mp4" />
-      </StyledVideo> */}
-    </Wrapper>
+      <div className="image-wrap">
+        <Image src={img_4} alt="wedding-thumbnail" priority />
+      </div>
+      <div className="info-container">
+        <span className="date">2024년 2월 24일 토요일 오후 1시 30분</span>
+        <span className="location">스카이웨딩컨벤션 4층 스카이홀</span>
+      </div>
+      <div className="flower-image-wrap">
+        <Image src={flowerImage} alt="divide-image" priority />
+      </div>
+    </section>
   );
 };

@@ -64,7 +64,7 @@ export function KakaoMap() {
 }
 
 const Wrapper = styled.div`
-  max-width: 500px;
+  max-width: 420px;
   width: 100%;
   height: 400px;
 `;

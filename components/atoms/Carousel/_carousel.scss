@@ -1,14 +1,16 @@
-import styled from "styled-components";
-
-export const CarouselContainer = styled.div`
-  max-width: 100vw;
+.carousel-container {
+  max-width: 420px;
   max-height: 80vh;
   height: auto;
+  background-color: rgb(242, 239, 239);
+  padding-bottom: 20px;
 
   .main {
     /* background-color: #fff6dd; */
     max-width: 500px;
     overflow-x: hidden;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   .sub {
@@ -18,4 +20,4 @@ export const CarouselContainer = styled.div`
     max-width: 500px;
     overflow-x: hidden;
   }
-`;
+}
