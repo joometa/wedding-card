@@ -35,7 +35,7 @@ export const Introduction = () => {
             </strong>
           </p>
           <p className="child">
-            의 아들
+            <span className="relationship">의 아들</span>
             <strong className="name">정주</strong>
           </p>
         </div>
@@ -46,7 +46,8 @@ export const Introduction = () => {
             <strong className="name">김계윤</strong>
           </p>
           <p className="child">
-            의 딸<strong className="name">유리</strong>
+            <span className="relationship">의 딸</span>
+            <strong className="name">유리</strong>
           </p>
         </div>
       </div>

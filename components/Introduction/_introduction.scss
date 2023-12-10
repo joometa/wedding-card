@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 24px 0;
+    padding: 24px 10px;
     margin-top: 50px;
     border-top: 1px solid rgba(223, 211, 211, 0.7);
     border-bottom: 1px solid rgba(223, 211, 211, 0.7);
@@ -34,7 +34,7 @@
         display: flex;
         justify-content: space-between;
 
-        width: 50%;
+        width: 55%;
         margin-bottom: 10px;
         .dot {
           color: rgb(0, 0, 0, 0.5);
@@ -52,7 +52,12 @@
         display: flex;
         justify-content: flex-end;
         line-height: 1;
-        width: 50%;
+        width: 45%;
+        .relationship {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+        }
         .name {
           margin-left: 20px;
         }
@@ -65,7 +70,7 @@
       .parent {
         display: flex;
         justify-content: space-between;
-        width: 50%;
+        width: 55%;
         .dot {
           color: rgb(0, 0, 0, 0.5);
         }
@@ -73,7 +78,12 @@
       .child {
         display: flex;
         justify-content: flex-end;
-        width: 50%;
+        width: 45%;
+        .relationship {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+        }
         .name {
           margin-left: 20px;
         }
