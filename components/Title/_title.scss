@@ -1,15 +1,21 @@
 .title-container {
   width: 100%;
-  height: var(--vh);
+  min-height: 100vh;
+  height: 100%;
   font-family: "MapoFlowerIsland";
-  padding-top: 40px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
 
   figure {
     font-size: 20px;
     display: flex;
     justify-content: center;
     opacity: 0.8;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    @media screen and (max-width: 376px) {
+      font-size: 16px;
+    }
   }
 
   .name-area {
@@ -25,9 +31,15 @@
       color: rgb(95, 88, 89);
       .en {
         font-size: 15px;
+        @media screen and (max-width: 376px) {
+          font-size: 13px;
+        }
       }
       .ko {
         font-size: 17px;
+        @media screen and (max-width: 376px) {
+          font-size: 14px;
+        }
       }
     }
 
@@ -39,13 +51,20 @@
   }
 
   .image-wrap {
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    img {
+      min-height: 300px;
+      object-fit: contain;
+      width: 100%;
+      max-height: 60vh;
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: white;
+    }
   }
 
   .info-container {
@@ -54,6 +73,9 @@
     gap: 12px;
     color: rgb(95, 88, 89);
     align-items: center;
+    @media screen and (max-width: 376px) {
+      font-size: 14px;
+    }
 
     .date {
     }

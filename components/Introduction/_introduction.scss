@@ -13,6 +13,7 @@
 
   .desc {
     text-align: center;
+    line-height: 1.8;
   }
 
   .family-info {
@@ -26,14 +27,19 @@
 
     .male {
       display: flex;
-      line-height: 1;
+      line-height: normal;
       height: 20px;
       margin-bottom: 14px;
+      @media screen and (max-width: 376px) {
+        font-size: 14px;
+      }
 
       .parent {
         display: flex;
         justify-content: space-between;
-
+        // align-items: flex-end;
+        height: 100%;
+        // align-content: ;
         width: 55%;
         margin-bottom: 10px;
         .dot {
@@ -46,20 +52,34 @@
             top: 0;
             left: -16px;
           }
+          @media screen and (max-width: 376px) {
+            font-size: 15px;
+          }
         }
       }
       .child {
         display: flex;
         justify-content: flex-end;
-        line-height: 1;
+        line-height: normal;
         width: 45%;
+
         .relationship {
           flex: 1;
           display: flex;
           justify-content: center;
+          align-items: center;
+          @media screen and (max-width: 376px) {
+            font-size: 13px;
+            vertical-align: middle;
+          }
         }
         .name {
           margin-left: 20px;
+          display: flex;
+          // align-items: center;
+          @media screen and (max-width: 376px) {
+            font-size: 15px;
+          }
         }
       }
     }
@@ -67,12 +87,21 @@
       line-height: 1;
       display: flex;
       height: 16px;
+      @media screen and (max-width: 376px) {
+        font-size: 14px;
+      }
       .parent {
         display: flex;
         justify-content: space-between;
         width: 55%;
+
         .dot {
           color: rgb(0, 0, 0, 0.5);
+        }
+        .name {
+          @media screen and (max-width: 376px) {
+            font-size: 15px;
+          }
         }
       }
       .child {
@@ -83,9 +112,15 @@
           flex: 1;
           display: flex;
           justify-content: center;
+          @media screen and (max-width: 376px) {
+            font-size: 14px;
+          }
         }
         .name {
           margin-left: 20px;
+          @media screen and (max-width: 376px) {
+            font-size: 15px;
+          }
         }
       }
     }

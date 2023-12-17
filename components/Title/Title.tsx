@@ -37,10 +37,10 @@ export const Title = () => {
         </div>
       </div>
       <div className="image-wrap">
-        <Image src={img_4} alt="wedding-thumbnail" priority />
+        <Image src={img_4} alt="wedding-thumbnail" priority={true} />
       </div>
       <div className="info-container">
-        <span className="date">2024년 2월 24일 토요일 오후 1시 30분</span>
+        <span className="date">2024년 2월 24일 토요일 오후 1시</span>
         <span className="location">스카이웨딩컨벤션 4층 스카이홀</span>
       </div>
       <div className="flower-image-wrap">

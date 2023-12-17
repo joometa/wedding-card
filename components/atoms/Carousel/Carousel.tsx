@@ -32,13 +32,13 @@ export const Carousel = () => {
     ));
   }, []);
 
-  const renderSubImages = useCallback(() => {
-    return images.map((img, idx) => (
-      <SwiperSlide className="image-wrap" key={idx}>
-        <ImageItem size="sub" src={img} />
-      </SwiperSlide>
-    ));
-  }, []);
+  // const renderSubImages = useCallback(() => {
+  //   return images.map((img, idx) => (
+  //     <SwiperSlide className="image-wrap" key={idx}>
+  //       <ImageItem size="sub" src={img} />
+  //     </SwiperSlide>
+  //   ));
+  // }, []);
 
   return (
     <>
@@ -52,7 +52,7 @@ export const Carousel = () => {
         >
           {renderMainImages()}
         </Swiper>
-        <Swiper
+        {/* <Swiper
           className="sub"
           modules={[Thumbs]}
           thumbs={{ swiper: thumbsSwiper }}
@@ -67,7 +67,7 @@ export const Carousel = () => {
           }}
         >
           {renderSubImages()}
-        </Swiper>
+        </Swiper> */}
       </div>
       <ImageModal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
         <img

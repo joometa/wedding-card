@@ -28,7 +28,7 @@ export const Introduction = () => {
         <div className="male">
           <p className="parent">
             <strong className="name">이해권</strong>
-            <div className="dot">·</div>
+            <span className="dot">·</span>
             <strong className="name">
               <Image src={flower} alt="mom" width={15} height={15} />
               <span>황미경</span>
@@ -42,7 +42,7 @@ export const Introduction = () => {
         <div className="female">
           <p className="parent">
             <strong className="name">강상호</strong>
-            <div className="dot">·</div>
+            <span className="dot">·</span>
             <strong className="name">김계윤</strong>
           </p>
           <p className="child">

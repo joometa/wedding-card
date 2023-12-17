@@ -61,14 +61,9 @@ export default function Home() {
           </Link>
         </button>
       </AccountTransfer>
-      <GuestBookContainer>
-        <Header>
-          <span />
-          <strong>방명록</strong>
-          <span />
-        </Header>
-        <GuestBook />
-      </GuestBookContainer>
+
+      <GuestBook />
+
       <ShareZone>
         <Header>
           <span />

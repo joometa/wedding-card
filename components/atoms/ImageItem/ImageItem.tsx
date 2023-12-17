@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import React, { ReactNode } from "react";
+import React, { ReactNode, lazy } from "react";
 import styled from "styled-components";
 
 interface Props {
@@ -18,7 +18,15 @@ export function ImageItem({ className, src, size = "main", onClick }: Props) {
   return (
     <Wrapper data-size={size} onClick={handleClick}>
       <div className="blur-background" />
-      <img className={className} src={src.src} alt="wedding-image" />
+      <Image
+        className={className}
+        src={src.src}
+        alt="wedding-image"
+        // priority
+        width={300}
+        height={300}
+        placeholder="empty"
+      />
     </Wrapper>
   );
 }

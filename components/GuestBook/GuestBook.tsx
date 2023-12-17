@@ -7,6 +7,7 @@ import { collection, addDoc, onSnapshot } from "firebase/firestore";
 import firebase from "firebase/app";
 import { db } from "@/lib/firebase/firebasedb";
 import { formatDate } from "@/core/formatDate";
+import "./_guestbook.scss";
 
 interface ListItem {
   content: string;
@@ -53,7 +54,8 @@ export const GuestBook = () => {
   // console.log(date.toISOString());
 
   return (
-    <Container>
+    <section className="guestbook-section">
+      <h2 className="guestbook-header">방명록</h2>
       <label htmlFor="name">이름</label>
       <input type="text" id="name" onChange={(e) => setName(e.target.value)} />
       <label htmlFor="content">내용</label>
@@ -83,48 +85,6 @@ export const GuestBook = () => {
             <p className="guest-book-item--content">{d.content}</p>
           </div>
         ))}
-    </Container>
+    </section>
   );
 };
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  .btn-container {
-    display: flex;
-    button {
-      width: 100px;
-      padding: 8px 16px;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      &:hover {
-        filter: brightness(80%);
-      }
-    }
-
-    .btn-complete {
-      background-color: lightblue;
-    }
-    .btn-cancel {
-      background-color: lightcoral;
-    }
-  }
-
-  .guest-book-item {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    background-color: lightpink;
-    &--header {
-      display: flex;
-      justify-content: space-between;
-    }
-    &--content {
-    }
-  }
-`;
