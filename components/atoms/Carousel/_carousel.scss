@@ -1,23 +1,48 @@
 .carousel-container {
   max-width: 420px;
-  max-height: 80vh;
-  height: 100%;
-  background-color: rgb(242, 239, 239);
-  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
 
   .main {
-    /* background-color: #fff6dd; */
+    background-color: rgb(242, 239, 239);
     max-width: 500px;
     overflow-x: hidden;
     padding-bottom: 0;
     margin-bottom: 0;
+    max-height: 400px;
+    height: 100%;
+    @media screen and (max-width: 500px) {
+      max-width: 100vw;
+    }
   }
 
-  .sub {
+  .navigator {
     margin-top: 20px;
     max-height: 100px;
     padding: 0 20px;
-    max-width: 500px;
+    max-width: 85px;
     overflow-x: hidden;
+    display: flex;
+
+    .dots {
+      display: flex;
+      transition: transform 0.3s ease-out;
+      gap: 10px;
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        background-color: lightgray;
+        border-radius: 50%;
+        display: flex;
+        transition: transform 0.3s ease-out;
+
+        &.active {
+          background-color: #000;
+        }
+      }
+    }
   }
 }
