@@ -3,3 +3,5 @@ export * from "./Title/Title";
 export * from "./Introduction/Introduction";
 export * from "./GuestBook/GuestBook";
 export * from "./Gallery/Gallery";
+export * from "./Location/Location";
+export * from "./AccountTransfer/AccountTransfer";

@@ -1,0 +1,70 @@
+.account-transfer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  height: 100%;
+  overflow: visible;
+
+  &-header {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  .account-list {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+
+    .account-info {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+
+      &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        .btn-copy {
+          border-radius: 8px;
+          height: 30px;
+          width: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #eb9778;
+          font-size: 14px;
+          vertical-align: center;
+          line-height: 1;
+          color: whitesmoke;
+        }
+
+        .kakao-pay {
+          background-color: #fae100;
+          border-radius: 8px;
+          height: 30px;
+          width: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          img {
+            width: 50px;
+            height: 20px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}

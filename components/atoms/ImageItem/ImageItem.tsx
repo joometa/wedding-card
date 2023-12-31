@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import React, { ReactNode, lazy } from "react";
+import React from "react";
 import "./_image-item.scss";
 
 interface Props {

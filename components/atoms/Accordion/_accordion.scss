@@ -1,0 +1,45 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  color: #5f5859;
+
+  &--title {
+    display: flex;
+    font-weight: 500;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 1;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #dfd3d3b3;
+
+    &.active {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    svg {
+      flex-shrink: 0;
+      margin-left: 10px;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease-in-out;
+
+      &.active {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &--content {
+    background-color: #dfd3d34d;
+    padding: 15px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    height: auto;
+    font-family: MapoFlowerIsland;
+  }
+}

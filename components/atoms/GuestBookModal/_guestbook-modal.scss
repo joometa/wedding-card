@@ -1,0 +1,115 @@
+.guestbook-modal-container {
+  min-height: 50vh;
+  background-color: #fff;
+  width: 420px;
+  font-family: GowunBatang-Regular;
+
+  @media screen and (max-width: 500px) {
+    max-width: 90vw;
+  }
+
+  .guestbook-modal-title {
+    width: 100%;
+    height: 60px;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .write-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .write-content {
+      padding: 16px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .input-name {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #eeeeee;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        outline: none;
+      }
+
+      .input-msg {
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #eeeeee;
+        resize: none;
+        outline: none;
+        overflow: auto;
+        scrollbar-width: none;
+      }
+      .input-msg::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .write-btn-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+
+      .btn-complete {
+        width: 45%;
+        background-color: #dfd3d3b3;
+        padding: 8px;
+        border-radius: 10px;
+        box-shadow: 9px 3px 12px -6px rgba(0, 0, 0, 0.2);
+      }
+      .btn-cancel {
+        width: 45%;
+        background-color: #eeeeee;
+        padding: 8px;
+        border-radius: 10px;
+        box-shadow: 9px 3px 12px -6px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    overflow-y: auto;
+    max-height: 50vh;
+
+    .list-item {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background-color: #dfd3d34d;
+      font-family: GowunBatang-Regular;
+      color: #5f5859;
+      border-radius: 8px;
+
+      &--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        strong {
+          font-weight: 600;
+          max-width: calc(100% - 60px);
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        .time {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

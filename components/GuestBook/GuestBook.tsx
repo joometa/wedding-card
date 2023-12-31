@@ -1,15 +1,15 @@
 "use client";
-import { formatDistanceToNow, isToday, isYesterday, format } from "date-fns";
-import koLocale from "date-fns/locale/ko";
-import { useState } from "react";
-import styled from "styled-components";
-import { collection, addDoc, onSnapshot } from "firebase/firestore";
-import firebase from "firebase/app";
+import { useEffect, useState } from "react";
+import { collection, addDoc, getDocs } from "firebase/firestore";
 import { db } from "@/lib/firebase/firebasedb";
+import IconList from "public/assets/icons/list.svg";
+import IconWrite from "public/assets/icons/write.svg";
 import { formatDate } from "@/core/formatDate";
+import { GuestBookModal } from "@/components";
+
 import "./_guestbook.scss";
 
-interface ListItem {
+export interface ListItem {
   content: string;
   id: string;
   name: string;
@@ -17,7 +17,8 @@ interface ListItem {
 }
 export const GuestBook = () => {
   const date = new Date();
-
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
+  const [modalType, setModalType] = useState<"write" | "list">("write");
   const [name, setName] = useState<string>("");
   const [content, setContent] = useState<string>("");
   const [list, setList] = useState<ListItem[]>([]);
@@ -40,51 +41,82 @@ export const GuestBook = () => {
     console.log(date.toLocaleString());
   };
 
-  const snap = onSnapshot(collection(db, "guest-book"), (querySnapshot) => {
-    let _temp: any[] = [];
+  // const snap = onSnapshot(collection(db, "guest-book"), (querySnapshot) => {
+  //   let _temp: any[] = [];
 
+  //   querySnapshot.forEach((doc) => {
+  //     let data = doc.data();
+  //     data = { ...data, id: doc.id };
+  //     _temp.push(data);
+  //   });
+  //   setList(_temp);
+  // });
+
+  const handleClickPostButton = () => {
+    setModalType("write");
+    setIsOpenModal(true);
+  };
+
+  const handleClickListButton = () => {
+    setModalType("list");
+    setIsOpenModal(true);
+  };
+
+  const fetchData = async () => {
+    const querySnapshot = await getDocs(collection(db, "guest-book"));
+    let _temp: any[] = [];
     querySnapshot.forEach((doc) => {
       let data = doc.data();
       data = { ...data, id: doc.id };
       _temp.push(data);
     });
     setList(_temp);
-  });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   // console.log(date.toISOString());
 
   return (
-    <section className="guestbook-section">
-      <h2 className="guestbook-header">방명록</h2>
-      <label htmlFor="name">이름</label>
-      <input type="text" id="name" onChange={(e) => setName(e.target.value)} />
-      <label htmlFor="content">내용</label>
-      <input
-        type="text"
-        id="content"
-        onChange={(e) => setContent(e.target.value)}
+    <>
+      <section className="guestbook-section">
+        <h2 className="guestbook-header">방명록</h2>
+
+        <div className="guest-book-control-box">
+          <button className="btn-write" onClick={handleClickPostButton}>
+            <IconWrite />
+          </button>
+          <button className="btn-show-total" onClick={handleClickListButton}>
+            <IconList />
+          </button>
+        </div>
+        <div className="guest-book-container">
+          {list.length > 0 &&
+            list.map((d, i) => {
+              if (i > 2) return;
+              return (
+                <div key={d.id} className="guest-book-item">
+                  <div className="guest-book-item--header">
+                    <strong>{d.name}</strong>
+                    <span className="time">
+                      {d.createdAt && formatDate(d.createdAt)}
+                    </span>
+                  </div>
+                  <p className="guest-book-item--content">{d.content}</p>
+                </div>
+              );
+            })}
+        </div>
+      </section>
+      <GuestBookModal
+        isOpen={isOpenModal}
+        onClose={() => setIsOpenModal(false)}
+        type={modalType}
+        refreshList={fetchData}
+        list={list}
       />
-      <div className="btn-container">
-        <button className="btn-complete" onClick={handleClickComplete}>
-          완료
-        </button>
-        <button onClick={handleClickCancel} className="btn-cancel">
-          취소
-        </button>
-      </div>
-
-      <strong>방명록</strong>
-
-      {list.length > 0 &&
-        list.map((d, i) => (
-          <div key={d.id} className="guest-book-item">
-            <div className="guest-book-item--header">
-              <strong>{d.name}</strong>
-              <span>{d.createdAt && formatDate(d.createdAt)}</span>
-            </div>
-            <p className="guest-book-item--content">{d.content}</p>
-          </div>
-        ))}
-    </section>
+    </>
   );
 };

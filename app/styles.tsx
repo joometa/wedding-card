@@ -17,16 +17,6 @@ export const Information = styled.section`
   }
 `;
 
-export const Gallery = styled.section`
-  width: 100%;
-  height: max-content;
-  max-width: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-`;
-
 export const Header = styled.div`
   display: flex;
   margin-top: 50px;
