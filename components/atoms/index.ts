@@ -8,3 +8,4 @@ export * from "./NaverMap";
 export * from "./Tmap";
 export * from "./Accordion/Accordion";
 export * from "./GuestBookModal/GuestBookModal";
+export * from "./DivideImage/DivideImage";

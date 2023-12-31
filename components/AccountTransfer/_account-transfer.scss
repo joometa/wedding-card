@@ -7,8 +7,19 @@
   overflow: visible;
 
   &-header {
-    font-size: 40px;
+    font-size: 25px;
     margin-bottom: 50px;
+    font-family: MapoFlowerIsland;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #5f5859;
+  }
+
+  &-desc {
+    font-family: MapoFlowerIsland;
+    color: #5f5859;
+    text-align: center;
+    margin-bottom: 40px;
   }
 
   .account-list {
@@ -17,6 +28,7 @@
     flex-direction: column;
     gap: 20px;
     height: 100%;
+    padding: 0 16px;
 
     .account-info {
       display: flex;

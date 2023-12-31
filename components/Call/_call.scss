@@ -1,0 +1,137 @@
+.call-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  font-family: GowunBatang-Regular;
+
+  .flower {
+    margin-bottom: 30px;
+  }
+
+  .child {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    .title {
+      font-weight: 500;
+    }
+    .btn-box {
+      display: flex;
+      gap: 10px;
+      .btn-phone {
+        background-color: #c3c8f8d7;
+        border-radius: 50%;
+        width: 43px;
+        height: 43px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+        &.bridal {
+          background-color: rgb(252, 219, 224);
+        }
+      }
+      .btn-text {
+        background-color: rgb(219, 218, 218);
+        border-radius: 50%;
+        width: 43px;
+        height: 43px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+
+  .parent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      padding: 16px;
+      text-align: center;
+      min-width: 100%;
+      border-top: 1px solid rgba(223, 211, 211, 0.7);
+      border-bottom: 1px solid rgba(223, 211, 211, 0.7);
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    .parent-container {
+      display: flex;
+      justify-content: space-around;
+
+      .parent-box {
+        display: flex;
+        flex-direction: column;
+
+        .parent-title {
+          text-align: center;
+          margin-bottom: 20px;
+          font-weight: 400;
+          // color: #5b12aa;
+
+          &.bridal {
+            // color: #76c789;
+          }
+        }
+        .parent-call-info-box {
+          margin-bottom: 20px;
+          .parent-call-info-name {
+            display: flex;
+            vertical-align: middle;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            .relationship {
+              color: rgb(149, 149, 149);
+              font-weight: 300;
+              font-size: 14px;
+              margin-right: 6px;
+              line-height: normal;
+            }
+          }
+
+          .parent-call-btn-box {
+            display: flex;
+            gap: 10px;
+            .btn-call,
+            .btn-text {
+              border-radius: 50%;
+              width: 43px;
+              height: 43px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              svg {
+                width: 25px;
+                height: 25px;
+              }
+            }
+            .btn-call {
+              background-color: #c3c8f8d7;
+              &.bridal {
+                background-color: rgb(252, 219, 224);
+              }
+            }
+            .btn-text {
+              background-color: rgb(219, 218, 218);
+            }
+          }
+        }
+      }
+    }
+  }
+}

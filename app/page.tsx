@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { GuestBookContainer, Road, ShareZone, Header } from "./styles";
 import {
   Title,
   AccountTransfer,
@@ -8,31 +7,37 @@ import {
   Introduction,
   Gallery,
   Location,
+  Call,
+  DivideImage,
+  Share,
+  Footer,
 } from "@/components";
-import { KakaoShare } from "@/components/atoms/KakaoShare";
-import Link from "next/link";
-
 import "./_home.scss";
 
 export default function Home() {
   return (
-    <main className="home-container">
-      <Title />
-      <Introduction />
-      <Gallery />
-      <Location />
-      <AccountTransfer />
-      <GuestBook />
+    <>
+      <main className="home-container">
+        <Title />
 
-      <ShareZone>
-        <Header>
-          <span />
-          <strong>공유하기</strong>
-          <span />
-        </Header>
+        <DivideImage />
 
-        <KakaoShare />
-      </ShareZone>
-    </main>
+        <Introduction />
+        {/* <DivideImage /> */}
+        <Call />
+        {/* <DivideImage /> */}
+        <Gallery />
+        <DivideImage />
+        <Location />
+        <DivideImage />
+        <AccountTransfer />
+        <DivideImage />
+        <GuestBook />
+        <DivideImage />
+
+        <Share />
+      </main>
+      <Footer />
+    </>
   );
 }

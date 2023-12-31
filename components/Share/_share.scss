@@ -1,0 +1,23 @@
+.share-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  margin-bottom: 80px;
+
+  .share-header {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    padding: 0 16px;
+    font-family: MapoFlowerIsland;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #5f5859;
+  }
+  .share-btn-box {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -8,21 +8,22 @@ export const Introduction = () => {
     <section className="introduction-section">
       <strong>결혼합니다</strong>
       <div className="desc">
-        여름에 태어난 정주
+        빛나는 20대에 만나 30대가 된 현재까지
         <br />
-        봄에 태어난 유리
+        서로의 마음에 사랑의 확신을 수놓았고
         <br />
-        <br />
-        관심사도, 가치관도 달랐던 두사람
-        <br />
-        사랑으로 닮은 꼴이 되어
-        <br />
-        인생이라는 여정을 함께 떠나려 합니다.
+        그 믿음으로 부부의 연을 이어가려 합니다.
         <br />
         <br />
-        따뜻한 격려와 축복으로
+        이유없이 운명처럼 끌린 저희 두사람,
         <br />
-        힘찬 출발의 자리를 빛내주시면 감사하겠습니다.
+        이제는 한 가정을 이끌어나갈 준비를 마쳤습니다.
+        <br />
+        <br />
+        믿음과 사랑으로 하나 되는 이 자리에
+        <br />
+        함께하셔서 축복해 주시기 바랍니다.
+        <br />
       </div>
       <div className="family-info">
         <div className="male">

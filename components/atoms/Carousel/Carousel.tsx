@@ -19,7 +19,7 @@ export const Carousel = () => {
 
   const [prevIndex, setPrevIndex] = useState<number>(0);
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  // const dots = [0, 0, 0, 0, 0];
+
   const [dots, setDots] = useState(Array.from({ length: images.length }));
 
   const handleClickDetail = (value: string) => {
