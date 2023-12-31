@@ -3,7 +3,7 @@
 import React, { useEffect, useMemo } from "react";
 import styled from "styled-components";
 import IconKaKaoNavi from "public/assets/images/kakaonavi.svg";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 declare global {
   interface Window {
@@ -45,9 +45,8 @@ export const KaKaoNavi: React.FC = () => {
 
   return (
     <KaKaoNaviButton onClick={handleClick}>
-      <Image
-        src={IconKaKaoNavi}
-        alt="tmap-button"
+      <IconKaKaoNavi
+        alt="kaako-navi-button"
         width={50}
         height={50}
         quality={100}
