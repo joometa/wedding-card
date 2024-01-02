@@ -14,10 +14,8 @@ declare global {
 export function KakaoShare() {
   const shareUrl = typeof window !== "undefined" ? window.location.href : "";
 
-  console.log(shareUrl);
   useEffect(() => {
     if (typeof window !== "undefined") {
-      console.log("?1231221321");
       const kakaoScript = document.createElement("script");
       kakaoScript.src =
         "https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js";

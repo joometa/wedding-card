@@ -27,7 +27,7 @@ export const Location = () => {
       <div style={{ display: "flex", gap: "20px", marginTop: "20px" }}>
         <Tmap />
         <NaverMap />
-        <KaKaoNavi />
+        {/* <KaKaoNavi /> */}
       </div>
     </section>
   );

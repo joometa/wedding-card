@@ -11,6 +11,7 @@ import {
   DivideImage,
   Share,
   Footer,
+  Calendar,
 } from "@/components";
 import "./_home.scss";
 
@@ -25,11 +26,12 @@ export default function Home() {
         <Introduction />
         {/* <DivideImage /> */}
         <Call />
+        <Calendar />
         {/* <DivideImage /> */}
         <Gallery />
         <DivideImage />
         <Location />
-        <DivideImage />
+        {/* <DivideImage /> */}
         <AccountTransfer />
         <DivideImage />
         <GuestBook />

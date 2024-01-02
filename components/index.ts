@@ -8,3 +8,4 @@ export * from "./AccountTransfer/AccountTransfer";
 export * from "./Call/Call";
 export * from "./Share/Share";
 export * from "./Footer/Footer";
+export * from "./Calendar/Calendar";

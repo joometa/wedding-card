@@ -40,9 +40,10 @@ export function ImageModal({ isOpen, children, onClose }: Props) {
           transform: "translate(-50%,-50%)",
           border: "none",
           display: "flex",
-          width: "fit-content",
+          minWidth: "100%",
           height: "fit-content",
-          maxWidth: "90vw",
+          borderRadius: 0,
+          // maxWidth: "90vw",
           maxHeight: "90vh",
         },
       }}
@@ -56,4 +57,9 @@ export function ImageModal({ isOpen, children, onClose }: Props) {
 
 const ModalContent = styled.div`
   padding: 0;
+  width: 100%;
+  height: 100%;
+  img {
+    object-fit: contain;
+  }
 `;

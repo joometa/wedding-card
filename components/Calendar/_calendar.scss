@@ -1,0 +1,82 @@
+.calendar-container {
+  font-family: MapoFlowerIsland;
+  width: 100%;
+
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    strong {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    span {
+      font-size: 15px;
+    }
+  }
+
+  .calendar-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    border-top: 1px solid rgba(223, 211, 211, 0.7);
+    border-bottom: 1px solid rgba(223, 211, 211, 0.7);
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+
+    .row {
+      display: flex;
+      // justify-content: space-between;
+      height: 50px;
+      align-items: flex-end;
+      // background-color: lightblue;
+      gap: 5px;
+      span {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        z-index: 3;
+        &.d-day {
+          position: relative;
+          // color:white;
+          &::before {
+            content: "";
+            border-radius: 50%;
+            background-color: brown;
+            position: absolute;
+            opacity: 0.3;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 28px;
+            height: 28px;
+            z-index: 1;
+          }
+        }
+      }
+
+      &.days {
+        font-size: 14px;
+        color: rgb(164, 164, 164);
+      }
+    }
+  }
+
+  .calendar-count-down {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #5f5859;
+    .heart {
+      color: #dfd3d3b3;
+      line-height: normal;
+    }
+  }
+}

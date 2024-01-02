@@ -23,7 +23,7 @@ export const Carousel = () => {
   const [dots, setDots] = useState(Array.from({ length: images.length }));
 
   const handleClickDetail = (value: string) => {
-    if (typeof window !== "undefined" && window.innerWidth >= 768) {
+    if (typeof window !== "undefined") {
       setDetailImageUrl(value);
       setIsOpenModal(true);
     }
@@ -93,11 +93,7 @@ export const Carousel = () => {
         </div>
       </div>
       <ImageModal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
-        <img
-          src={detailImageUrl}
-          alt="detail-image"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
+        <img src={detailImageUrl} alt="detail-image" />
       </ImageModal>
     </>
   );
