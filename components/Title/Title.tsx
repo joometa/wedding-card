@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { Whisper } from "next/font/google";
-
 import "./_title.scss";
 import Image from "next/image";
-import img_4 from "public/assets/images/4.webp";
-import flowerImage from "public/assets/images/flower_white.png";
+import img_5 from "public/assets/images/5.webp";
 
 const whisper = Whisper({
   weight: "400",
@@ -37,7 +35,7 @@ export const Title = () => {
         </div>
       </div>
       <div className="image-wrap">
-        <Image src={img_4} alt="wedding-thumbnail" priority={true} />
+        <Image src={img_5} alt="wedding-thumbnail" priority={true} />
       </div>
       <div className="info-container">
         <span className="date">2024년 2월 24일 토요일 오후 1시</span>
