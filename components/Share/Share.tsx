@@ -3,8 +3,10 @@ import IconLinkCopy from "public/assets/icons/link.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Swal from "sweetalert2";
 import "./_share.scss";
+import { useEffect, useState } from "react";
 
 export const Share = () => {
+  const [url, setUrl] = useState<string>("");
   const handleFireAlert = () => {
     Swal.fire({
       // title: "링크가 복사되었습니다.",
@@ -13,6 +15,12 @@ export const Share = () => {
       confirmButtonText: "확인",
     });
   };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setUrl(window.location.href);
+    }
+  }, []);
 
   return (
     <section className="share-section">
@@ -23,10 +31,7 @@ export const Share = () => {
           <span>카카오톡 공유</span>
         </div>
         <div className="copy-link-box">
-          <CopyToClipboard
-            text={window.location.href}
-            onCopy={() => handleFireAlert()}
-          >
+          <CopyToClipboard text={url} onCopy={() => handleFireAlert()}>
             <button className="copy-link-btn">
               <IconLinkCopy />
             </button>

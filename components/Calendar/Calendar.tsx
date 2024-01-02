@@ -8,10 +8,6 @@ export const Calendar = () => {
 
   const d_day_count = () => {
     if (days > 0) {
-      console.log(
-        `향후 ${days}일 후에 ${format(targetDate, "yyyy년 MM월 dd일")}입니다.`
-      );
-
       return (
         <>
           정주 <span className="heart">&nbsp;♥&nbsp;</span> 유리의 결혼식까지{" "}
@@ -19,11 +15,6 @@ export const Calendar = () => {
         </>
       );
     } else if (days < 0) {
-      console.log(
-        `${format(targetDate, "yyyy년 MM월 dd일")}로부터 ${Math.abs(
-          days
-        )}일이 지났습니다.`
-      );
       return (
         <>
           정주 <span className="heart">&nbsp;♥&nbsp;</span> 유리의 결혼식이{" "}
