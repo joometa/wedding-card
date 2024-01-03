@@ -26,6 +26,35 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>정주❤️유리 결혼합니다</title>
+        <meta name="title" content="정주❤️유리 결혼합니다." />
+        <meta
+          name="description"
+          content="2024년 2월 24일 오후 1시, 춘천 스카이컨벤션 4층 스카이홀"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://jj-yr-wedding.com/" />
+        <meta property="og:title" content="정주❤️유리 결혼합니다." />
+        <meta
+          property="og:description"
+          content="2024년 2월 24일 오후 1시, 춘천 스카이컨벤션 4층 스카이홀"
+        />
+        <meta
+          property="og:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://jj-yr-wedding.com/" />
+        <meta property="twitter:title" content="정주❤️유리 결혼합니다." />
+        <meta
+          property="twitter:description"
+          content="2024년 2월 24일 오후 1시, 춘천 스카이컨벤션 4층 스카이홀"
+        />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
       </head>
       <body className={inter.className}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
