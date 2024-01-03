@@ -1,0 +1,19 @@
+.music-player-container {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  // background-color: red;
+  justify-content: center;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button > svg {
+    stroke: lightgray;
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -3,6 +3,7 @@ import { Whisper } from "next/font/google";
 import "./_title.scss";
 import Image from "next/image";
 import img_5 from "public/assets/images/5.webp";
+import { MusicPlayer } from "@/components";
 
 const whisper = Whisper({
   weight: "400",
@@ -22,6 +23,9 @@ export const Title = () => {
 
   return (
     <section className="title-container">
+      <div className="music-player-wrap">
+        <MusicPlayer />
+      </div>
       <figure className={whisper.className}>wedding invitation</figure>
       <div className="name-area">
         <div className="name-wrap">

@@ -6,6 +6,13 @@
   padding-top: 30px;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  .music-player-wrap {
+    position: absolute;
+    top: 10px;
+    right: -20px;
+  }
 
   figure {
     font-size: 20px;
