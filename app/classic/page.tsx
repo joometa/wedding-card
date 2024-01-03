@@ -12,17 +12,17 @@ import {
   Footer,
   Calendar,
 } from "@/components";
-import "./_home.scss";
+import "./_classic.scss";
 
-export default function Home() {
+export default function Classic() {
   return (
     <>
-      <main className="home-container">
+      <main className="classic-container">
         <Title />
 
         <DivideImage />
 
-        <Introduction />
+        <Introduction isClassic />
         {/* <DivideImage /> */}
         <Call />
         <Calendar />
@@ -31,7 +31,7 @@ export default function Home() {
         <DivideImage />
         <Location />
         {/* <DivideImage /> */}
-        <AccountTransfer />
+        <AccountTransfer isClassic />
         <DivideImage />
         <GuestBook />
         <DivideImage />

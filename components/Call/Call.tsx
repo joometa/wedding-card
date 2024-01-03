@@ -5,7 +5,11 @@ import ImgFlower from "public/assets/images/flower_1.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Call = () => {
+interface Props {
+  v2?: boolean;
+}
+
+export const Call = ({ v2 }: Props) => {
   return (
     <section className="call-container">
       <div className="flower">
@@ -55,19 +59,21 @@ export const Call = () => {
           </div>
           <div className="parent-box">
             <strong className="parent-title bridal">신부 측 혼주</strong>
-            <div className="parent-call-info-box">
-              <p className="parent-call-info-name">
-                <span className="relationship">아버지</span>강상호
-              </p>
-              <div className="parent-call-btn-box">
-                <Link href="tel:01032211646" className="btn-call bridal">
-                  <IconPhone />
-                </Link>
-                <Link href="tel:01032211646" className="btn-text">
-                  <IconComment />
-                </Link>
+            {v2 && (
+              <div className="parent-call-info-box">
+                <p className="parent-call-info-name">
+                  <span className="relationship">아버지</span>강상호
+                </p>
+                <div className="parent-call-btn-box">
+                  <Link href="tel:01032211646" className="btn-call bridal">
+                    <IconPhone />
+                  </Link>
+                  <Link href="tel:01032211646" className="btn-text">
+                    <IconComment />
+                  </Link>
+                </div>
               </div>
-            </div>
+            )}
             <div className="parent-call-info-box">
               <p className="parent-call-info-name">
                 <span className="relationship">어머니</span>김계윤
