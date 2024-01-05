@@ -33,7 +33,8 @@ export function KakaoShare() {
           objectType: "feed",
           content: {
             title: "정주❤️유리 결혼합니다",
-            description: "2024.02.24(1:00PM), 춘천스카이웨딩홀",
+            description:
+              "2024년 2월 24일 오후 1시, 춘천 스카이컨벤션 4층 스카이홀",
             imageUrl: `https://firebasestorage.googleapis.com/v0/b/wedding-card-55ab8.appspot.com/o/33.webp?alt=media&token=0fd3e784-9bc6-4d56-97b9-c79b41695b0f`,
             link: {
               mobileWebUrl: shareUrl,
