@@ -41,7 +41,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://metatags.io/images/meta-tags.png"
+          content="https://firebasestorage.googleapis.com/v0/b/wedding-card-55ab8.appspot.com/o/33.webp?alt=media&token=0fd3e784-9bc6-4d56-97b9-c79b41695b0f"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -53,7 +53,7 @@ export default function RootLayout({
         />
         <meta
           property="twitter:image"
-          content="https://metatags.io/images/meta-tags.png"
+          content="https://firebasestorage.googleapis.com/v0/b/wedding-card-55ab8.appspot.com/o/33.webp?alt=media&token=0fd3e784-9bc6-4d56-97b9-c79b41695b0f"
         />
       </head>
       <body className={inter.className}>
