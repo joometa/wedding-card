@@ -10,6 +10,7 @@ import "swiper/css/thumbs";
 import "swiper/css/navigation";
 
 import { images } from "./data";
+import Image from "next/image";
 
 export const Carousel = () => {
   const [mainSwiper, setMainSwiper] = useState<SwiperType | null>(null);
@@ -65,6 +66,24 @@ export const Carousel = () => {
   return (
     <>
       <div className="carousel-container">
+        <div className="click-info-msg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6"
+            />
+          </svg>
+          <span>클릭하면 확대됩니다.</span>
+        </div>
+
         <Swiper
           className="main"
           modules={[Navigation]}
@@ -75,6 +94,7 @@ export const Carousel = () => {
         >
           {renderMainImages()}
         </Swiper>
+
         <div className="navigator">
           <div
             className="dots"
@@ -92,9 +112,11 @@ export const Carousel = () => {
           </div>
         </div>
       </div>
-      <ImageModal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
-        <img src={detailImageUrl} alt="detail-image" />
-      </ImageModal>
+      <ImageModal
+        isOpen={isOpenModal}
+        onClose={() => setIsOpenModal(false)}
+        src={detailImageUrl}
+      ></ImageModal>
     </>
   );
 };

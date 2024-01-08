@@ -1,6 +1,7 @@
 .calendar-container {
   font-family: MapoFlowerIsland;
   width: 100%;
+  padding: 16px;
 
   .calendar-header {
     display: flex;
@@ -74,6 +75,9 @@
     margin-top: 20px;
     font-size: 15px;
     color: #5f5859;
+    @media screen and (max-width: 376px) {
+      font-size: 13px;
+    }
     .heart {
       color: #dfd3d3b3;
       line-height: normal;

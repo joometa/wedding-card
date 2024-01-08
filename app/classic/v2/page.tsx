@@ -24,7 +24,7 @@ export default function V2() {
 
         <Introduction isClassic v2 />
         {/* <DivideImage /> */}
-        <Call />
+        <Call v2 />
         <Calendar />
         {/* <DivideImage /> */}
         <Gallery />

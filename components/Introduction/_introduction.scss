@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 16px;
 
   .classic-title {
     display: flex;
@@ -30,40 +32,52 @@
   }
 
   .family-info {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
+    display: grid;
     width: 100%;
     padding: 24px 10px;
     margin-top: 50px;
     border-top: 1px solid rgba(223, 211, 211, 0.7);
     border-bottom: 1px solid rgba(223, 211, 211, 0.7);
+    align-items: center;
 
     .male {
       display: flex;
       line-height: normal;
       height: 20px;
       margin-bottom: 14px;
+      justify-content: center;
       @media screen and (max-width: 376px) {
         font-size: 14px;
       }
 
       .parent {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         height: 100%;
-        width: 55%;
+        flex-shrink: 0;
         margin-bottom: 10px;
+        gap: 10px;
+        width: 50%;
 
         .dot {
           color: rgb(0, 0, 0, 0.5);
         }
         .name {
           position: relative;
+          display: flex;
+          align-items: center;
+
           img {
-            position: absolute;
-            top: 0;
-            left: -16px;
+            margin-right: 2px;
+            align-self: center;
           }
+
+          span {
+            line-height: 1;
+          }
+
           @media screen and (max-width: 376px) {
             font-size: 15px;
           }
@@ -73,7 +87,7 @@
         display: flex;
         justify-content: flex-end;
         line-height: normal;
-        width: 45%;
+        width: 40%;
 
         .relationship {
           flex: 1;
@@ -86,9 +100,8 @@
           }
         }
         .name {
-          margin-left: 20px;
+          margin-right: 20px;
           display: flex;
-          // align-items: center;
           @media screen and (max-width: 376px) {
             font-size: 15px;
           }
@@ -99,13 +112,17 @@
       line-height: 1;
       display: flex;
       height: 16px;
+      justify-content: center;
+
       @media screen and (max-width: 376px) {
         font-size: 14px;
       }
       .parent {
         display: flex;
-        justify-content: space-between;
-        width: 55%;
+        justify-content: center;
+        gap: 10px;
+        flex-shrink: 0;
+        width: 50%;
 
         &.except {
           display: flex;
@@ -123,8 +140,8 @@
       }
       .child {
         display: flex;
-        justify-content: flex-end;
-        width: 45%;
+        justify-content: flex-start;
+        width: 40%;
         .relationship {
           flex: 1;
           display: flex;
@@ -134,7 +151,7 @@
           }
         }
         .name {
-          margin-left: 20px;
+          margin-right: 20px;
           @media screen and (max-width: 376px) {
             font-size: 15px;
           }

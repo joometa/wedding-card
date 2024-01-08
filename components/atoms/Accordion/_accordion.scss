@@ -18,6 +18,9 @@
     font-family: MapoFlowerIsland;
     font-weight: 700;
     background-color: #dfd3d3b3;
+    @media screen and (max-width: 376px) {
+      font-size: 15px;
+    }
 
     &.active {
       border-bottom-left-radius: 0;
@@ -43,5 +46,8 @@
     border-bottom-right-radius: 6px;
     height: auto;
     font-family: MapoFlowerIsland;
+    @media screen and (max-width: 376px) {
+      font-size: 14px;
+    }
   }
 }

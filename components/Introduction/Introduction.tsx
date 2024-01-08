@@ -65,7 +65,7 @@ export const Introduction = ({ isClassic, v2 }: Props) => {
           <p className="parent">
             <strong className="name">이해권</strong>
             <span className="dot">·</span>
-            <strong className="name">
+            <strong className="name mom">
               <Image src={flower} alt="mom" width={15} height={15} />
               <span>황미경</span>
             </strong>

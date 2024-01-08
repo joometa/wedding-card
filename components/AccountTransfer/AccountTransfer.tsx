@@ -80,23 +80,6 @@ export const AccountTransfer = ({ isClassic, v2 }: Props) => {
           )}
         </Accordion>
         <Accordion title="신부측 계좌번호">
-          {v2 && (
-            <div className="account-info" style={{ marginBottom: "30px" }}>
-              <div className="account-info__left">
-                <span>국민은행 489725-93-120614</span>
-                <span>강상호</span>
-              </div>
-              <div className="account-info__right">
-                <CopyToClipboard
-                  text="48972593120614"
-                  onCopy={() => handleFireAlert("48972593120614")}
-                >
-                  <button className="btn-copy">복사하기</button>
-                </CopyToClipboard>
-              </div>
-            </div>
-          )}
-
           {!isClassic ? (
             <div className="account-info">
               <div className="account-info__left">
@@ -125,20 +108,39 @@ export const AccountTransfer = ({ isClassic, v2 }: Props) => {
               </div>
             </div>
           ) : (
-            <div className="account-info">
-              <div className="account-info__left">
-                <span>농협 301082-52-055929</span>
-                <span>김계윤</span>
-              </div>
-              <div className="account-info__right">
-                <CopyToClipboard
-                  text="30108252055929"
-                  onCopy={() => handleFireAlert("30108252055929")}
-                >
-                  <button className="btn-copy">복사하기</button>
-                </CopyToClipboard>
-              </div>
-            </div>
+            <>
+              {v2 ? (
+                <div className="account-info">
+                  <div className="account-info__left">
+                    <span>국민은행 489725-93-120614</span>
+                    <span>강상호</span>
+                  </div>
+                  <div className="account-info__right">
+                    <CopyToClipboard
+                      text="48972593120614"
+                      onCopy={() => handleFireAlert("48972593120614")}
+                    >
+                      <button className="btn-copy">복사하기</button>
+                    </CopyToClipboard>
+                  </div>
+                </div>
+              ) : (
+                <div className="account-info">
+                  <div className="account-info__left">
+                    <span>농협 301082-52-055929</span>
+                    <span>김계윤</span>
+                  </div>
+                  <div className="account-info__right">
+                    <CopyToClipboard
+                      text="30108252055929"
+                      onCopy={() => handleFireAlert("30108252055929")}
+                    >
+                      <button className="btn-copy">복사하기</button>
+                    </CopyToClipboard>
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </Accordion>
       </div>
